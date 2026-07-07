@@ -4,8 +4,8 @@ email: "oleg@oleg4.ru"
 description: >-
   Портфолио фрилансера. Создание лендингов, восстановление фото, AI-аватары,
   нейрофотосессии, адресные песни, программные продукты.
-baseurl: ""
-url: "https://oleg4.ru"
+baseurl: "/Oleg4-portfolio"
+url: "https://bars4um-sys.github.io"
 lang: "ru"
 
 # Социальные сети
