@@ -1,0 +1,38 @@
+---
+layout: default
+title: "Блог"
+description: "Блог Chen Chu — мысли о фрилансе, творчестве и технологиях."
+---
+
+<section class="blog-page">
+  <h1 style="text-align: center; margin-bottom: 3rem;">Блог</h1>
+  
+  <div class="blog-list">
+    {% for post in site.posts %}
+    <article class="blog-post fade-in">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <div class="blog-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%d.%m.%Y" }}
+        </time>
+        {% if post.categories %}
+        · {% for cat in post.categories %}
+          <span>{{ cat }}</span>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+        {% endif %}
+      </div>
+      <div class="blog-excerpt">
+        <p>{{ post.excerpt | strip_html | truncate: 300 }}</p>
+      </div>
+    </article>
+    {% endfor %}
+    
+    {% if site.posts.size == 0 %}
+    <div style="text-align: center; padding: 4rem; color: var(--text-muted);">
+      <p style="font-size: 3rem; margin-bottom: 1rem;">📝</p>
+      <h3>Скоро здесь появятся статьи</h3>
+      <p>Следите за обновлениями!</p>
+    </div>
+    {% endif %}
+  </div>
+</section>

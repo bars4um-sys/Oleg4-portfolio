@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="logo">
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Chen Chu" width="40" height="40">
+      <div>
+        <span class="logo-text">Chen Chu</span>
+        <span class="logo-sub">Digital Craftsman</span>
+      </div>
+    </a>
+    
+    <nav class="main-nav" id="mainNav">
+      <a href="{{ '/' | relative_url }}">Главная</a>
+      <a href="{{ '/about/' | relative_url }}">Обо мне</a>
+      <a href="{{ '/blog/' | relative_url }}">Блог</a>
+      <a href="{{ '/contacts/' | relative_url }}">Контакты</a>
+    </nav>
+    
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12h18M3 6h18M3 18h18"/>
+      </svg>
+    </button>
+  </div>
+</header>

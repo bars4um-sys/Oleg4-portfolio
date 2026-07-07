@@ -1,0 +1,52 @@
+# Основные настройки
+title: "Chen Chu — Digital Craftsman & Creative Technologist"
+email: "oleg@oleg4.ru"
+description: >-
+  Портфолио фрилансера. Создание лендингов, восстановление фото, AI-аватары,
+  нейрофотосессии, адресные песни, программные продукты.
+baseurl: ""
+url: "https://oleg4.ru"
+lang: "ru"
+
+# Социальные сети
+social:
+  telegram: "https://t.me/your_telegram"
+  whatsapp: "https://wa.me/your_phone"
+  email: "mailto:oleg@oleg4.ru"
+
+# Сборка
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Коллекции для навыков
+collections:
+  skills:
+    output: true
+    permalink: /skills/:name/
+
+# Навигация
+defaults:
+  - scope:
+      path: ""
+      type: "skills"
+    values:
+      layout: "skill"
+      author: "Chen Chu"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Chen Chu"
+
+# Исключения
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - PLAN.md

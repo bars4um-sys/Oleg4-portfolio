@@ -1,0 +1,52 @@
+---
+layout: default
+title: "Портфолио"
+description: "Chen Chu — создание лендингов, восстановление фото, AI-аватары, нейрофотосессии, адресные песни, программные продукты."
+---
+
+<section class="hero">
+  <div class="hero-content">
+    <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Chen Chu" class="hero-logo" width="120" height="120">
+    <h1>Chen Chu</h1>
+    <p class="hero-subtitle">
+      Digital Craftsman & Creative Technologist.<br>
+      Превращаю идеи в цифровые продукты, которые работают.
+    </p>
+    <div class="hero-cta">
+      <a href="#skills" class="btn btn-primary">Мои навыки</a>
+      <a href="{{ '/contacts/' | relative_url }}" class="btn btn-secondary">Связаться</a>
+    </div>
+  </div>
+</section>
+
+<section class="skills-section" id="skills">
+  <div class="section-title">
+    <h2>Что я умею</h2>
+    <p>Каждый навык — отдельный мир. Выбери то, что тебе нужно.</p>
+  </div>
+  
+  <div class="skills-grid">
+    {% assign sorted_skills = site.skills | sort: 'order' %}
+    {% for skill in sorted_skills %}
+    <a href="{{ skill.url | relative_url }}" class="skill-card fade-in" data-skill="{{ skill.skill_id }}">
+      <span class="skill-icon">{{ skill.icon }}</span>
+      <h3>{{ skill.title }}</h3>
+      <p>{{ skill.description }}</p>
+      <div class="skill-tags">
+        {% for tag in skill.tags %}
+        <span class="skill-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta-section" style="max-width: 800px; margin: 0 auto 4rem;">
+  <h2>Готовы начать?</h2>
+  <p>Напишите мне в Telegram или WhatsApp — обсудим ваш проект бесплатно.</p>
+  <div class="hero-cta">
+    <a href="{{ site.social.telegram }}" class="btn btn-primary" target="_blank" rel="noopener">Telegram</a>
+    <a href="{{ site.social.whatsapp }}" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</section>

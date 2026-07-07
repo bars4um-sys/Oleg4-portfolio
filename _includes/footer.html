@@ -1,0 +1,32 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">
+        <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Chen Chu" width="32" height="32">
+        <div>
+          <span class="logo-text">Chen Chu</span>
+        </div>
+      </div>
+      <p>Digital Craftsman & Creative Technologist. Создаю цифровые продукты, которые вдохновляют.</p>
+    </div>
+    
+    <div class="footer-nav">
+      <h4>Навигация</h4>
+      <a href="{{ '/' | relative_url }}">Главная</a>
+      <a href="{{ '/about/' | relative_url }}">Обо мне</a>
+      <a href="{{ '/blog/' | relative_url }}">Блог</a>
+      <a href="{{ '/contacts/' | relative_url }}">Контакты</a>
+    </div>
+    
+    <div class="footer-social">
+      <h4>Связаться</h4>
+      <a href="{{ site.social.telegram }}" target="_blank" rel="noopener">Telegram</a>
+      <a href="{{ site.social.whatsapp }}" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="{{ site.social.email }}">Email</a>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; {{ 'now' | date: '%Y' }} Chen Chu. Сделано с ❤️</p>
+  </div>
+</footer>
