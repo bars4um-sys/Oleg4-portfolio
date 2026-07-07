@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Обо мне"
+permalink: /about/
 description: "Chen Chu — Digital Craftsman & Creative Technologist. Узнайте больше обо мне."
 ---
 

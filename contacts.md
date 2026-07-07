@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Контакты"
+permalink: /contacts/
 description: "Свяжитесь со мной — Telegram, WhatsApp, Email."
 ---
 
